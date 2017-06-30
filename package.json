@@ -1,16 +1,16 @@
 {
-  "name": "react-boilerplate",
-  "version": "3.4.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "name": "reac-quiz",
+  "version": "1.0.0",
+  "description": "React Nordnet quiz",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/anneback/react-quiz.git"
   },
   "engines": {
     "npm": ">=3",
     "node": ">=5"
   },
-  "author": "Max Stoiber",
+  "author": "Jesper Annebäck",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
@@ -219,10 +219,13 @@
     "intl": "1.2.5",
     "invariant": "2.2.2",
     "ip": "1.1.4",
+    "jss-theme-reactor": "^0.11.1",
     "lodash": "4.17.2",
     "minimist": "1.2.0",
-    "react": "15.4.1",
-    "react-dom": "15.4.1",
+    "nordnet-ui-kit": "^1.5.0",
+    "prop-types": "^15.5.10",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
     "react-helmet": "3.2.2",
     "react-intl": "2.1.5",
     "react-redux": "4.4.6",
