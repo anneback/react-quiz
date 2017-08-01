@@ -3363,13 +3363,14 @@ gifsicle@^3.0.0:
     logalot "^2.0.0"
 
 glamor@^2.15.5:
-  version "2.20.37"
-  resolved "https://registry.yarnpkg.com/glamor/-/glamor-2.20.37.tgz#3cd576deb760eaaf475dcc1f9b77bf6a7d2f8b26"
+  version "2.20.38"
+  resolved "https://registry.yarnpkg.com/glamor/-/glamor-2.20.38.tgz#5aa908fc044891588ed05bdbeda59c5328a615a4"
   dependencies:
     fbjs "^0.8.12"
     inline-style-prefixer "^3.0.6"
     object-assign "^4.1.1"
     prop-types "^15.5.10"
+    through "^2.3.8"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -7798,7 +7799,7 @@ through2@^2.0.0, through2@~2.0.0:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-through@^2.3.6, through@~2.3.6:
+through@^2.3.6, through@^2.3.8, through@~2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
