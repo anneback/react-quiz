@@ -9,7 +9,6 @@ import Helmet from 'react-helmet';
 // import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { Input } from 'nordnet-ui-kit';
 import { createStyleSheet } from 'jss-theme-reactor';
 
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
@@ -25,6 +24,7 @@ import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import StudentInfoWidget from '../StudentInfoWidget';
+import QuizPage from '../QuizPage';
 
 export const styleSheet = createStyleSheet('HomePage', () => ({
   container: {

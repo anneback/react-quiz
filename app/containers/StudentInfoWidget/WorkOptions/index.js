@@ -13,11 +13,17 @@ import { Input } from 'nordnet-ui-kit';
 export const styleSheet = createStyleSheet('WorkOptions', () => ({
   container: {
     display: 'flex',
-    justifyContent: 'space-between',
+    flexGrow: 1,
+    justifyContent: 'space-around',
   },
-  workTitle: {
-    display: 'flex',
-    justifyContent: 'space-between',
+  itemLable: {
+    fontFamily: 'Open Sans',
+    margin: 0,
+  },
+  workLable: {
+    fontFamily: 'Open Sans',
+    fontWeight: 'bold',
+    margin: 0,
   },
 }));
 
@@ -30,18 +36,14 @@ class WorkOptions extends React.Component {
     const classes = this.context.styleManager.render(styleSheet);
     return (
       <div className={classes.container}>
-        <div className={classes.workTitle}>Work?</div>
-        <Input label="Fulltime" type="checkbox" />
-        <Input label="Internship" type="checkbox" />
-        <Input label="Thesis" type="checkbox" />
+        <span className={classes.workLable}>Work?</span>
+        <Input className={classes.itemLable} label="Fulltime" type="checkbox" />
+        <Input className={classes.itemLable} label="Internship" type="checkbox" />
+        <Input className={classes.itemLable} label="Thesis" type="checkbox" />
       </div>
     );
   }
 }
-
-WorkOptions.propTypes = {
-  onSubmitForm: PropTypes.func,
-};
 
 WorkOptions.contextTypes = {
   styleManager: PropTypes.object.isRequired,

@@ -7,11 +7,15 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { createStyleSheet } from 'jss-theme-reactor';
-import { Input, Button, Icon } from 'nordnet-ui-kit';
+import { Button, Icon } from 'nordnet-ui-kit';
 
-import WorkOptions from './WorkOptions';
+import InputField from './InputField';
 
 export const styleSheet = createStyleSheet('StudentInfoWidget', () => ({
+  inputContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
   buttonContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
@@ -35,7 +39,8 @@ class StudentInfoWidget extends React.Component { // eslint-disable-line react/p
   // }
   handleClick(e) {
     e.preventDefault();
-    console.log('clicking');
+    this.setState({ quizIsOn: true });
+    // console.log('clicking');
   }
 
   render() {
@@ -43,12 +48,7 @@ class StudentInfoWidget extends React.Component { // eslint-disable-line react/p
 
     return (
       <div>
-        <Input label="Name" placeholder="First and second name" />
-        <Input label="Email" placeholder="email@domain.com" />
-        <Input label="Phone" placeholder="+46 70 111 22 33" />
-        <Input label="Programme" placeholder="Your studies" />
-        <Input label="Graduation Year" placeholder="Expected graduation year." />
-        <WorkOptions />
+        <InputField />
         <div className={classes.buttonContainer}>
           <Button variant="primary" modifier="action" onClick={this.handleClick} >
             Go To Quiz
@@ -60,20 +60,20 @@ class StudentInfoWidget extends React.Component { // eslint-disable-line react/p
   }
 }
 
-StudentInfoWidget.propTypes = {
-  loading: React.PropTypes.bool,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.object,
-    React.PropTypes.bool,
-  ]),
-  repos: React.PropTypes.oneOfType([
-    React.PropTypes.array,
-    React.PropTypes.bool,
-  ]),
-  onSubmitForm: React.PropTypes.func,
-  username: React.PropTypes.string,
-  onChangeUsername: React.PropTypes.func,
-};
+// StudentInfoWidget.propTypes = {
+//   loading: React.PropTypes.bool,
+//   error: React.PropTypes.oneOfType([
+//     React.PropTypes.object,
+//     React.PropTypes.bool,
+//   ]),
+//   repos: React.PropTypes.oneOfType([
+//     React.PropTypes.array,
+//     React.PropTypes.bool,
+//   ]),
+//   onSubmitForm: React.PropTypes.func,
+//   username: React.PropTypes.string,
+//   onChangeUsername: React.PropTypes.func,
+// };
 
 StudentInfoWidget.defaultProps = {
   quizIsOn: false,
