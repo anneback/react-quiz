@@ -24,7 +24,6 @@ import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import StudentInfoWidget from '../StudentInfoWidget';
-import QuizPage from '../QuizPage';
 
 export const styleSheet = createStyleSheet('HomePage', () => ({
   container: {
